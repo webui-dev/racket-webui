@@ -1,8 +1,9 @@
 #lang racket/base
 
+; Import WebUI
 (require "../../main.rkt")
-(require racket/file)
 
+; A simple callback function that can be called from JavaScript
 (define (myRacketFunction e)
   (let* ([a (webui-event-get-int e 0)]
          [b (webui-event-get-int e 1)]
@@ -11,12 +12,15 @@
     (flush-output)
     (format "~a" res)))
 
-(define html-content (file->string "index.html"))
-(define my-window (webui-new-window))
+; Create a Window
+(define win (webui-new-window))
 
-(webui-bind my-window "myRacketFunction" myRacketFunction)
+; Bind our callback function
+(webui-bind win "myRacketFunction" myRacketFunction)
 
-(webui-show my-window html-content)
+; Show the window
+(webui-show win "index.html")
 
+; Wait until all windows get closed
 (webui-wait)
 (webui-clean)
