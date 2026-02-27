@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebUI - Custom Web Server Example (Racket)</title>
+    <!-- webui.js is served by the Racket backend on port 8081, not by the web server -->
+    <script src="http://localhost:8081/webui.js"></script>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        color: white;
+        background: linear-gradient(to right, #507d91, #1c596f, #022737);
+        text-align: center;
+        font-size: 18px;
+      }
+      button {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        transition: 0.2s;
+        background: #3498db;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      h1 { text-shadow: -7px 10px 7px rgb(67 57 57 / 76%); }
+      button:hover { background: #c9913d; }
+      a:link, a:visited, a:active { color: #fd5723; }
+      a:hover { color: #f0bcac; }
+      pre {
+        display: inline-block;
+        background: rgba(0,0,0,0.3);
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Web Server Example (Racket)</h1>
+    <p>
+      This page is served by your custom web server on port 8080.<br>
+      The Racket backend is connected via <pre>http://localhost:8081/webui.js</pre>
+    </p>
+    <h4><a href="second.html">Go to second page</a></h4>
+    <br>
+    <button onclick="my_backend_func(123, 456, 789);">Call my_backend_func()</button>
+  </body>
+</html>

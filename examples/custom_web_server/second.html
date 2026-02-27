@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebUI - Custom Web Server Second Page (Racket)</title>
+    <!-- webui.js is served by the Racket backend on port 8081, not by the web server -->
+    <script src="http://localhost:8081/webui.js"></script>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        color: white;
+        background: linear-gradient(to right, #507d91, #1c596f, #022737);
+        text-align: center;
+        font-size: 18px;
+      }
+      a:link, a:visited, a:active { color: #fd5723; }
+      a:hover { color: #f0bcac; }
+    </style>
+  </head>
+  <body>
+    <h1>This is the Second Page!</h1>
+    <h4><a href="index.html">Back to first page</a></h4>
+  </body>
+</html>
