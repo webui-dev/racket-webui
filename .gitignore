@@ -4,3 +4,5 @@
 /webui-macos-clang-arm64
 /webui-macos-clang-x64
 /webui-windows-msvc-x64
+/.claude
+CLAUDE.md
